@@ -1,0 +1,42 @@
+
+########################################
+instruction to launch model in gazebo and run the model
+########################################
+1. unzip Gazebo_package and put it into catkin workspace
+2. build catkin workspace
+3. To launch model into gazebo : 
+   roslaunch f_gantry_robot_moveit f_gantry_robot_start_gazebo.launch
+4. To launch model into Rviz :
+   roslaunch f_gantry_robot_moveit f_gantry_robot_moveit.launch 
+5. To move the robot, open new terminal
+   --> navigate to $ src/f_gantry_robot_moveit 
+   --> run below command
+       chmod +x home.py
+       chmod +x goal1.py
+       chmod +x goal2.py
+   --> to move robot to goal1 (make sure that home.py, goal1.py and goal2.py file is not opened in any editor)
+       rosrun f_gantry_robot_moveit goal1.py
+   --> to move robot to goal2
+       rosrun f_gantry_robot_moveit goal2.py
+   --> to move robot to home
+       rosrun f_gantry_robot_moveit home.py
+
+
+
+########################################
+instruction to validate the forward and inverse kinematics
+########################################
+
+1. unzip the validation file
+2. To check the final transformation :    FK_final transformation matrix.ipynb
+3. To check the Jacobian matrix :         IK_Jacobian Matrix.ipynb
+4. To validate the forward kinematics :   FK validation.ipynb
+5. To validate the inverse kinematics :   IK_validation.ipynb
+
+########################################
+instruction to verify reachanble workspace
+########################################
+
+
+1. Unzip the workspace_study file
+2. Run : Workspace.py
